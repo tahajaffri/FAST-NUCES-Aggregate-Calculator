@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Change from height to min-height */
 }
 
 .container {
@@ -16,6 +16,7 @@ body {
     border-radius: 8px; /* Rounded corners for container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 h1, h2 {
@@ -31,7 +32,7 @@ label {
     margin-top: 10px;
 }
 
-.custom-input {
+input {
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
