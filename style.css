@@ -36,7 +36,7 @@ form {
 label {
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Ensure labels stack properly */
 }
 
 /* Specific styling for "Correct Answers" text */
@@ -64,7 +64,6 @@ button {
     border-radius: 4px; /* Rounded corners for button */
     cursor: pointer;
 }
-
 button:hover {
     background-color: #218838;
 }
@@ -77,7 +76,6 @@ button:hover {
     overflow: hidden;
     margin-bottom: 20px; /* Add some space below the progress bar */
 }
-
 .progress-bar {
     height: 10px; /* Height of the progress bar */
     background-color: #28a745; /* Green color for the progress bar */
@@ -99,7 +97,6 @@ button:hover {
     color: #28a745; /* Green link color */
     text-decoration: none;
 }
-
 .credits a:hover {
     text-decoration: underline;
 }
