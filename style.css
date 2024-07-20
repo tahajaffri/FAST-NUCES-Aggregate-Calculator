@@ -6,9 +6,14 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Change from height to min-height */
 }
 
 .container {
@@ -61,8 +66,9 @@ button:hover {
 }
 
 .credits {
-    margin-top: 20px;
     text-align: center;
+    padding: 10px;
+    background-color: #222; /* Slightly lighter black for contrast */
 }
 
 .credits p {
