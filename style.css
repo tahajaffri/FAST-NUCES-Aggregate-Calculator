@@ -6,10 +6,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Column direction to manage vertical layout */
+    justify-content: center; /* Center the container vertically */
+    align-items: center; /* Center the container horizontally */
     height: 100vh;
-    position: relative; /* For positioning credits */
 }
 
 /* Container Styles */
@@ -85,11 +85,9 @@ button:hover {
 
 /* Credits Styles */
 .credits {
-    position: absolute;
-    bottom: 10px;
+    margin-top: auto; /* Push credits to the bottom of the viewport */
     text-align: center;
     font-size: 0.9em;
-    width: 100%;
     color: #fff; /* Ensure text is visible on dark background */
 }
 
