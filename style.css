@@ -47,7 +47,7 @@ label {
 
 /* Specific styling for "Correct Answers" text */
 label span.correct-answers-text {
-    color: #28a745; /* Green color for Correct Answers */
+    color: #OABF7D; /* Updated color for Correct Answers */
 }
 
 /* Input Styles */
@@ -57,7 +57,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #4F5D75;
-    color: #fff;
+    color: #fff; /* Text color */
 }
 
 /* Button Styles */
