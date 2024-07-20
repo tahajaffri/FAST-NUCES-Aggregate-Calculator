@@ -22,7 +22,7 @@ body {
     width: 90%;
     max-width: 400px;
     box-sizing: border-box;
-    margin-bottom: 40px; /* Adjusted margin for better spacing */
+    margin-bottom: 40px;
     overflow: auto;
 }
 
@@ -91,13 +91,12 @@ button:hover {
 
 /* Credits Styles */
 .credits {
-    position: relative;
     text-align: center;
     font-size: 0.9em;
     width: 100%;
     color: #fff;
     padding: 10px 0;
-    margin-top: 40px; /* Space above credits */
+    margin-top: 40px;
 }
 .credits a {
     color: #28a745;
