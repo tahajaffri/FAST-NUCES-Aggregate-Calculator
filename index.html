@@ -10,9 +10,6 @@
 <body>
     <div class="container">
         <h1>NU Test Aggregate Calculator</h1>
-        <div class="progress-bar-container">
-            <div id="progress-bar" class="progress-bar"></div>
-        </div>
         <form id="calculator-form">
             <label for="matric-percentage">Matric Percentage:</label>
             <input type="number" id="matric-percentage" required>
@@ -46,7 +43,7 @@
 
             <button type="button" onclick="calculate()">Calculate</button>
         </form>
-        <div id="result">
+        <div id="result" class="result-section">
             <h2>Results:</h2>
             <p id="nu-test-marks"></p>
             <p id="aggregate"></p>
