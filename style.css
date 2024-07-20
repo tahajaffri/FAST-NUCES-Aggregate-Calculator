@@ -81,8 +81,8 @@ button:hover {
 }
 
 /* Bold Numbers in Results */
-#nu-test-marks, #aggregate {
-    font-weight: bold; /* Make the text bold */
+.result-section span.result-number {
+    font-weight: bold; /* Make only the numbers bold */
 }
 
 /* Credits Styles */
