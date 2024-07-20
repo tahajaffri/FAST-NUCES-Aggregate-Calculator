@@ -80,6 +80,11 @@ button:hover {
     margin-top: 20px; /* Adds space between button and results */
 }
 
+/* Bold Numbers in Results */
+#nu-test-marks, #aggregate {
+    font-weight: bold; /* Make the text bold */
+}
+
 /* Credits Styles */
 .credits {
     text-align: center;
