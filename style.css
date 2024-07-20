@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for better contrast */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,10 +11,10 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #333; /* Dark gray background for container */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
 }
 
@@ -34,7 +35,9 @@ input {
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 4px; /* Rounded corners for input boxes */
+    background-color: #fff; /* White background for input boxes */
+    color: #000; /* Black text for input boxes */
 }
 
 button {
@@ -43,7 +46,7 @@ button {
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px; /* Rounded corners for button */
     cursor: pointer;
 }
 
