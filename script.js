@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const progressBarContainer = document.createElement('div');
-    const progressBar = document.createElement('div');
-    progressBarContainer.appendChild(progressBar);
-    progressBarContainer.classList.add('progress-bar-container');
-    progressBar.classList.add('progress-bar');
-    progressBar.setAttribute('id', 'progress-bar-fill');
-    document.querySelector('.container').insertBefore(progressBarContainer, document.getElementById('calculator-form'));
+    // Ensure there's only one progress bar
+    const existingProgressBar = document.getElementById('progress-bar-fill');
+    if (!existingProgressBar) {
+        const progressBarContainer = document.createElement('div');
+        const progressBar = document.createElement('div');
+        progressBarContainer.appendChild(progressBar);
+        progressBarContainer.classList.add('progress-bar-container');
+        progressBar.classList.add('progress-bar');
+        progressBar.setAttribute('id', 'progress-bar-fill');
+        document.querySelector('.container').insertBefore(progressBarContainer, document.getElementById('calculator-form'));
+    }
 
     // Initial call to update progress based on default form values
     updateProgress();
