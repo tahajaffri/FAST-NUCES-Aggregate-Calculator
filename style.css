@@ -23,6 +23,27 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
     box-sizing: border-box; /* Ensure padding is included in the width */
+    animation: fadeIn 1s ease-in-out; /* Animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #555;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar div {
+    height: 10px;
+    background-color: #28a745;
+    width: 0;
+    transition: width 0.3s ease-in-out;
 }
 
 h1, h2 {
