@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure it takes full height */
+    min-height: 100vh;
     position: relative;
 }
 
@@ -22,8 +22,8 @@ body {
     width: 90%;
     max-width: 400px;
     box-sizing: border-box;
-    margin-bottom: 80px;
-    overflow: auto; /* Allow scrolling if needed */
+    margin-bottom: 40px; /* Adjusted margin for better spacing */
+    overflow: auto;
 }
 
 /* Heading Styles */
@@ -91,14 +91,13 @@ button:hover {
 
 /* Credits Styles */
 .credits {
-    position: fixed;
-    bottom: 0;
+    position: relative;
     text-align: center;
     font-size: 0.9em;
     width: 100%;
     color: #fff;
     padding: 10px 0;
-    background-color: #000;
+    margin-top: 40px; /* Space above credits */
 }
 .credits a {
     color: #28a745;
