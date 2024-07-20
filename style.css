@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif; /* Use Poppins font */
     background-color: #000; /* Black background */
@@ -5,60 +6,42 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main-content {
-    flex: 1; /* Takes up remaining space */
-    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
+/* Container Styles */
 .container {
     background-color: #333; /* Dark gray background for container */
     padding: 20px;
     border-radius: 8px; /* Rounded corners for container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    animation: fadeIn 1s ease-in-out; /* Animation */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #555;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.progress-bar div {
-    height: 10px;
-    background-color: #28a745;
-    width: 0;
-    transition: width 0.3s ease-in-out;
-}
-
+/* Heading Styles */
 h1, h2 {
     text-align: center;
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
 }
 
+/* Label Styles */
 label {
     margin-top: 10px;
 }
 
+/* Label for "Correct Answers" */
+label.correct-answers {
+    color: #28a745; /* Green text color */
+}
+
+/* Input Styles */
 input {
     padding: 8px;
     margin-top: 5px;
@@ -68,6 +51,7 @@ input {
     color: #000; /* Black text for input boxes */
 }
 
+/* Button Styles */
 button {
     margin-top: 20px;
     padding: 10px;
@@ -82,22 +66,32 @@ button:hover {
     background-color: #218838;
 }
 
-#result {
-    margin-top: 20px;
+/* Progress Bar Styles */
+.progress-bar-container {
+    width: 100%;
+    background-color: #444; /* Dark gray background for the progress bar container */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add some space below the progress bar */
 }
 
+.progress-bar {
+    height: 10px; /* Height of the progress bar */
+    background-color: #28a745; /* Green color for the progress bar */
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Smooth transition for width changes */
+}
+
+/* Credits Styles */
 .credits {
+    position: absolute;
+    bottom: 10px;
     text-align: center;
-    padding: 10px;
-    background-color: #222; /* Slightly lighter black for contrast */
-}
-
-.credits p {
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .credits a {
-    color: #28a745; /* Link color */
+    color: #28a745; /* Green link color */
     text-decoration: none;
 }
 
