@@ -1,29 +1,29 @@
 /* General Body Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text for better contrast */
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Column direction to manage vertical layout */
-    justify-content: center; /* Center the container vertically */
-    align-items: center; /* Center the container horizontally */
-    height: 100vh;
-    position: relative; /* For positioning credits */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full height */
+    position: relative;
 }
 
 /* Container Styles */
 .container {
-    background-color: #333; /* Dark gray background for container */
+    background-color: #333;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners for container */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 90%; /* Responsive width */
-    max-width: 400px; /* Max width for larger screens */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    margin-bottom: 80px; /* Space for credits */
-    overflow: hidden; /* Prevent content overflow */
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    overflow: auto; /* Allow scrolling if needed */
 }
 
 /* Heading Styles */
@@ -42,12 +42,12 @@ form {
 label {
     margin-top: 10px;
     display: flex;
-    flex-direction: column; /* Ensure labels stack properly */
+    flex-direction: column;
 }
 
 /* Specific styling for "Correct Answers" text */
 label span.correct-answers-text {
-    color: #28a745; /* Green text color */
+    color: #28a745;
 }
 
 /* Input Styles */
@@ -55,9 +55,9 @@ input {
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px; /* Rounded corners for input boxes */
-    background-color: #fff; /* White background for input boxes */
-    color: #000; /* Black text for input boxes */
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
 }
 
 /* Button Styles */
@@ -67,7 +67,7 @@ button {
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px; /* Rounded corners for button */
+    border-radius: 4px;
     cursor: pointer;
 }
 button:hover {
@@ -77,31 +77,31 @@ button:hover {
 /* Progress Bar Styles */
 .progress-bar-container {
     width: 100%;
-    background-color: #444; /* Dark gray background for the progress bar container */
+    background-color: #444;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 20px; /* Add some space below the progress bar */
+    margin-bottom: 20px;
 }
 .progress-bar {
-    height: 10px; /* Height of the progress bar */
-    background-color: #28a745; /* Green color for the progress bar */
+    height: 10px;
+    background-color: #28a745;
     width: 0;
-    transition: width 0.3s ease-in-out; /* Smooth transition for width changes */
+    transition: width 0.3s ease-in-out;
 }
 
 /* Credits Styles */
 .credits {
-    position: fixed; /* Fixed position to stay at the bottom */
-    bottom: 0; /* Align exactly at the bottom */
+    position: fixed;
+    bottom: 0;
     text-align: center;
     font-size: 0.9em;
     width: 100%;
-    color: #fff; /* Ensure text is visible on dark background */
-    padding: 10px 0; /* Add some padding to ensure it doesn't overlap other content */
-    background-color: #000; /* Match background color to body */
+    color: #fff;
+    padding: 10px 0;
+    background-color: #000;
 }
 .credits a {
-    color: #28a745; /* Green link color */
+    color: #28a745;
     text-decoration: none;
 }
 .credits a:hover {
