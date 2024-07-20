@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative; /* For positioning credits */
 }
 
 /* Container Styles */
@@ -34,10 +35,12 @@ form {
 /* Label Styles */
 label {
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Label for "Correct Answers" */
-label.correct-answers {
+/* Specific styling for "Correct Answers" text */
+label span.correct-answers-text {
     color: #28a745; /* Green text color */
 }
 
@@ -88,6 +91,8 @@ button:hover {
     bottom: 10px;
     text-align: center;
     font-size: 0.9em;
+    width: 100%;
+    color: #fff; /* Ensure text is visible on dark background */
 }
 
 .credits a {
