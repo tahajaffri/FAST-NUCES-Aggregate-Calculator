@@ -8,48 +8,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-content">
-        <div class="container">
-            <h1>NU Test Aggregate Calculator</h1>
-            <div class="progress-bar" id="progress-bar"></div>
-            <form id="calculator-form">
-                <label for="matric-percentage">Matric Percentage:</label>
-                <input type="number" id="matric-percentage" required oninput="updateProgress()">
+    <div class="container">
+        <h1>NU Test Aggregate Calculator</h1>
+        <form id="calculator-form">
+            <label for="matric-percentage">Matric Percentage:</label>
+            <input type="number" id="matric-percentage" required>
 
-                <label for="fsc-percentage">Fsc Part 1 Percentage:</label>
-                <input type="number" id="fsc-percentage" required oninput="updateProgress()">
+            <label for="fsc-percentage">Fsc Part 1 Percentage:</label>
+            <input type="number" id="fsc-percentage" required>
 
-                <label for="adv-maths-correct">Advance Maths Correct Answers:</label>
-                <input type="number" id="adv-maths-correct" required oninput="updateProgress()">
+            <label for="adv-maths-correct" class="correct-answers">Advance Maths Correct Answers:</label>
+            <input type="number" id="adv-maths-correct" required>
 
-                <label for="adv-maths-attempted">Advance Maths Attempted:</label>
-                <input type="number" id="adv-maths-attempted" required oninput="updateProgress()">
+            <label for="adv-maths-attempted">Advance Maths Attempted:</label>
+            <input type="number" id="adv-maths-attempted" required>
 
-                <label for="basic-maths-correct">Basic Maths Correct Answers:</label>
-                <input type="number" id="basic-maths-correct" required oninput="updateProgress()">
+            <label for="basic-maths-correct" class="correct-answers">Basic Maths Correct Answers:</label>
+            <input type="number" id="basic-maths-correct" required>
 
-                <label for="basic-maths-attempted">Basic Maths Attempted:</label>
-                <input type="number" id="basic-maths-attempted" required oninput="updateProgress()">
+            <label for="basic-maths-attempted">Basic Maths Attempted:</label>
+            <input type="number" id="basic-maths-attempted" required>
 
-                <label for="iq-correct">IQ Correct Answers:</label>
-                <input type="number" id="iq-correct" required oninput="updateProgress()">
+            <label for="iq-correct" class="correct-answers">IQ Correct Answers:</label>
+            <input type="number" id="iq-correct" required>
 
-                <label for="iq-attempted">IQ Attempted:</label>
-                <input type="number" id="iq-attempted" required oninput="updateProgress()">
+            <label for="iq-attempted">IQ Attempted:</label>
+            <input type="number" id="iq-attempted" required>
 
-                <label for="english-correct">English Correct Answers:</label>
-                <input type="number" id="english-correct" required oninput="updateProgress()">
+            <label for="english-correct" class="correct-answers">English Correct Answers:</label>
+            <input type="number" id="english-correct" required>
 
-                <label for="english-attempted">English Attempted:</label>
-                <input type="number" id="english-attempted" required oninput="updateProgress()">
+            <label for="english-attempted">English Attempted:</label>
+            <input type="number" id="english-attempted" required>
 
-                <button type="button" onclick="calculate()">Calculate</button>
-            </form>
-            <div id="result">
-                <h2>Results:</h2>
-                <p id="nu-test-marks"></p>
-                <p id="aggregate"></p>
-            </div>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <div id="result">
+            <h2>Results:</h2>
+            <p id="nu-test-marks"></p>
+            <p id="aggregate"></p>
         </div>
     </div>
     <div class="credits">
