@@ -10,6 +10,7 @@ body {
     justify-content: center; /* Center the container vertically */
     align-items: center; /* Center the container horizontally */
     height: 100vh;
+    position: relative; /* For positioning credits */
 }
 
 /* Container Styles */
@@ -19,11 +20,13 @@ body {
     border-radius: 8px; /* Rounded corners for container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
 }
 
 /* Heading Styles */
 h1, h2 {
     text-align: center;
+    margin: 0; /* Ensure no extra margin affects positioning */
 }
 
 /* Form Styles */
@@ -85,9 +88,11 @@ button:hover {
 
 /* Credits Styles */
 .credits {
-    margin-top: auto; /* Push credits to the bottom of the viewport */
+    position: absolute;
+    bottom: 10px;
     text-align: center;
     font-size: 0.9em;
+    width: 100%;
     color: #fff; /* Ensure text is visible on dark background */
 }
 
