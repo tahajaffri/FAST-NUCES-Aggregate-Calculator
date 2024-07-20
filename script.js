@@ -1,19 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure there's only one progress bar
-    const existingProgressBar = document.getElementById('progress-bar-fill');
-    if (!existingProgressBar) {
-        const progressBarContainer = document.createElement('div');
-        const progressBar = document.createElement('div');
-        progressBarContainer.appendChild(progressBar);
-        progressBarContainer.classList.add('progress-bar-container');
-        progressBar.classList.add('progress-bar');
-        progressBar.setAttribute('id', 'progress-bar-fill');
-        document.querySelector('.container').insertBefore(progressBarContainer, document.getElementById('calculator-form'));
-    }
-
-    // Initial call to update progress based on default form values
-    updateProgress();
-
     // Add event listeners to inputs to update progress as user types
     const formInputs = document.querySelectorAll('#calculator-form input');
     formInputs.forEach(input => {
@@ -22,19 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function updateProgress() {
-    const form = document.getElementById('calculator-form');
-    const inputs = form.querySelectorAll('input');
-    let filledInputs = 0;
-
-    inputs.forEach(input => {
-        if (input.value) {
-            filledInputs++;
-        }
-    });
-
-    const progress = (filledInputs / inputs.length) * 100;
-    const progressBar = document.getElementById('progress-bar-fill');
-    progressBar.style.width = `${progress}%`;
+    // This function is no longer necessary as progress bar is removed
 }
 
 function calculate() {
