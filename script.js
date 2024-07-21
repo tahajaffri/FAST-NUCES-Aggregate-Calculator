@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Add event listeners to inputs to update progress as user types
-    const formInputs = document.querySelectorAll('#calculator-form input');
-    formInputs.forEach(input => {
-        input.addEventListener('input', updateProgress);
-    });
+    // No need to update progress, as progress bar is removed
 });
-
-function updateProgress() {
-    // This function is no longer necessary as progress bar is removed
-}
 
 function calculate() {
     // Get input values
@@ -45,11 +37,69 @@ function calculate() {
     // Calculate aggregate
     const matricComponent = matricPercentage * 0.10;
     const fscComponent = fscPercentage * 0.40;
-    const nuTestComponent = nuTestMarks * 0.50;
+    const testComponent = nuTestMarks * 0.50;
 
-    const aggregate = matricComponent + fscComponent + nuTestComponent;
+    const aggregate = matricComponent + fscComponent + testComponent;
 
-    // Display results
-    document.getElementById('nu-test-marks').innerText = `NU Test Marks: ${nuTestMarks.toFixed(3)}`;
-    document.getElementById('aggregate').innerText = `Aggregate: ${aggregate.toFixed(3)}`;
+    // Save current form content to restore later
+    const formContent = document.body.innerHTML;
+
+    // Modify the whole page content
+    document.body.innerHTML = `
+        <div class="result-wrapper">
+            <p class="aggregate">Aggregate: <span id="aggregate-value">0</span></p>
+            <p class="nu-test-marks">NU Test Marks: <span id="marks-value">0</span></p>
+            <button class="go-back-button" onclick="goBack()">Go Back</button>
+        </div>
+    `;
+
+    document.body.classList.add('result-background');
+
+    // Store the form content in a global variable
+    window.previousFormContent = formContent;
+
+    // Start counting effect for aggregate
+    countUp('aggregate-value', 0, aggregate.toFixed(2), 500, () => {
+        // Start counting effect for NU Test Marks after aggregate
+        countUp('marks-value', 0, nuTestMarks.toFixed(2), 500);
+    });
+}
+
+function countUp(elementId, start, end, duration, callback) {
+    const steps = 50; // Number of steps for smoother animation
+    const stepDuration = duration / steps; // Duration per step
+    const increment = (end - start) / steps; // Amount to increment per step
+
+    let current = start;
+    let obj = document.getElementById(elementId);
+
+    function step() {
+        current += increment;
+        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+            current = end;
+            obj.innerHTML = end;
+            if (callback) callback(); // Call the callback if provided
+        } else {
+            obj.innerHTML = current.toFixed(2);
+            setTimeout(step, stepDuration); // Use setTimeout for smoother control
+        }
+    }
+
+    step();
+}
+
+function goBack() {
+    // Restore the original form content
+    document.body.innerHTML = window.previousFormContent;
+
+    // Remove the result background class
+    document.body.classList.remove('result-background');
+
+    // Re-attach the event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        const formInputs = document.querySelectorAll('#calculator-form input');
+        formInputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
+    });
 }
